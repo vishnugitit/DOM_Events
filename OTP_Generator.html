@@ -6,8 +6,29 @@
     <title>Document</title>
 </head>
 <body>
-    <script>
-        
-    </script>
+  <div id="screen"></div>
+  <p id="otp"></p>
+
+  <button onclick="otp_Generator()">Click</button>
 </body>
+    <script>
+       
+     function otp_Generator(){
+        
+    input=Math.floor(Math.random()*10000);
+    if(input<1000){
+        input+=1000;
+    }
+document.getElementById("otp").innerHTML=input;
+otp.style.fontWeight="bold"
+otp.style.fontSize="40px"
+randomcolor=Math.floor(Math.random()*1000).toString(16);
+randomfont=Math.floor(Math.random()*1000).toString(10)
+document.body.style.backgroundColor="#"+randomcolor;
+otp.style.color="#"+randomfont
+
+     }
+  
+    </script>
+
 </html>

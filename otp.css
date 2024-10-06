@@ -1,0 +1,16 @@
+button{
+    height: 50px;
+    font-weight: bold;
+    border-radius: 7px;
+}
+button,p{
+    margin: 30px;
+}
+button{
+    margin-left: 70px;
+}
+p{
+    text-decoration: dotted;
+    text-align: center;
+    padding-top: 50px;
+}

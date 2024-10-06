@@ -1,12 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <p>1. using all mouse events implement otp generator and with all features explained in class.</p>
-    <a href="OTP_Generator.html">OTP_Generator</a>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="otp.css">
+    <title>Random_Color_OTP</title>
+
+  </head>
+  <body>
+    <div id="screen"></div>
+    <p id="otp"></p>
+    <button onclick="otp_Generator()">Send_OTP</button>
+  </body>
+  <script>
+// OTP_Generate Code
+    function otp_Generator() {
+      input = Math.floor(Math.random() * 10000);
+      if (input < 1000) {
+        input += 1000;
+      }
+    //   OTP_Output
+      document.getElementById("otp").innerHTML = input;
+    //   Random_Color
+      randomcolor = Math.floor(Math.random() * 10000).toString(16);
+      otp.style.backgroundColor = "#" + randomcolor;
+    //   OTP_Styling
+    otp.style.border="2px solid black"
+    otp.style.height="100px"
+    otp.style.width="200px"
+      otp.style.fontWeight = "bold";
+      otp.style.fontSize = "40px";
+    }
+  </script>
 </html>
